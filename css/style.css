@@ -1,0 +1,149 @@
+/* Base styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #034b1b;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero {
+ background-image: url(/images/real-1.webp);
+  background-size: cover;
+      background-position: center;
+    position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+.overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.5); /* 50% black */
+      z-index: -1;
+    }
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: #ffebd3;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  background: #034b1b;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+footer {
+  background: #212b32;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/*  Mobile (up to 600px) */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
+
+/*  Tablets (601px – 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .card {
+    flex: 1 1 45%;
+  }
+}
+
+/*  Desktop (1025px and above) */
+@media (min-width: 1025px) {
+  nav {
+    justify-content: flex-end;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .card {
+    flex: 1 1 22%;
+  }
+}
